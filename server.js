@@ -109,6 +109,6 @@ async function deleteNameDataBase(name) {
   }
 }
 
-api.listen(process.env.PORT || 3333, () => {
+api.listen(8080, () => {
   console.log("servidor rodando na porta 8080");
 });
