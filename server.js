@@ -4,16 +4,16 @@ const api = express();
 require("dotenv").config();
 const url = `mongodb+srv://admin:${process.env.PASS_BANCO}@dados.7d94myt.mongodb.net/`;
 const client = new MongoClient(url);
+const emittes = require("events");
 
-const buscarApiGet = (dados) => {
-  api.get("/", (data, resp) => {
-    try {
-      resp.send({ resposta: "OK", status: 200, dados: dados });
-    } catch (error) {
-      resp.send({ status: 404, resposta: "error 404 not found" });
-    }
-  });
-};
+api.get("/", async (data, resp) => {
+  try {
+    const apiDados = await consultarDatabase();
+    resp.send({ resposta: "OK", status: 200, dados: apiDados });
+  } catch (error) {
+    resp.send({ status: 404, resposta: "error 404 not found" });
+  }
+});
 
 async function databaseConnect() {
   try {
@@ -31,10 +31,8 @@ async function databaseConnect() {
 const consultarDatabase = async () => {
   const data = await databaseConnect();
   const databaseConsultFromMongo = await data.find().toArray();
-  buscarApiGet(databaseConsultFromMongo);
+  return databaseConsultFromMongo;
 };
-
-consultarDatabase();
 
 api.listen(8080, () => {
   console.log("servidor rodando na porta 8080");
