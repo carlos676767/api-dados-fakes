@@ -54,7 +54,6 @@ curl -X POST http://localhost:3000/post -H 'Content-Type: application/json' -d "
 curl -X PUT http://localhost:3000/edit -H 'Content-Type: application/json' -d '{ "id": 1, "nome": "Sicrano da Silva", "cpf:"319.136.964-30" }'
 ``
 
-> Use o código com cuidado.
 
 ### Exemplo de Exclusão de Dados (DELETE):
 
