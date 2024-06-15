@@ -70,8 +70,8 @@ curl -X PUT http://localhost:3000/edit -H 'Content-Type: application/json' -d '{
 
 ### Exemplo de Exclusão de Dados (DELETE):
 
-```bash
+``bash
 curl -X DELETE http://localhost:3000/delete -H 'Content-Type: application/json' -d '{ "id": 2 }'
-```
+``
 
 > Use o código com cuidado.
