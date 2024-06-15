@@ -9,10 +9,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "gerador-validador-cpf": "^5.0.2",
     "mongodb": "^6.7.0"
   }
 }
