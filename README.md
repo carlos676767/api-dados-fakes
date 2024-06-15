@@ -2,15 +2,13 @@
 
 ## Dados para Edição (PUT):
 
-```json
+``json
 {
   "id": 1,
   "nome": "Sicrano da Silva",
   "idade": 35,
   "cidade": "Rio de Janeiro"
-}
-
-```markdown
+}``
 # Documentação da API de Dados Fake
 
 ## Dados para Edição (PUT):
@@ -22,7 +20,7 @@
   "idade": 35,
   "cidade": "Rio de Janeiro"
 }
-```
+``
 
 > Use o código com cuidado.
 
@@ -32,7 +30,7 @@
 {
   "id": 2
 }
-```
+``
 
 > Use o código com cuidado.
 
@@ -54,24 +52,24 @@ curl http://localhost:3000/get
 
 ### Exemplo de Adição de Dados (POST):
 
-```bash
+``
 curl -X POST http://localhost:3000/post -H 'Content-Type: application/json' -d '{ "nome": "Fulano de Tal", "idade": 30, "cidade": "São Paulo" }'
-```
+``
 
 > Use o código com cuidado.
 
 ### Exemplo de Edição de Dados (PUT):
 
-```bash
+``bash
 curl -X PUT http://localhost:3000/edit -H 'Content-Type: application/json' -d '{ "id": 1, "nome": "Sicrano da Silva", "idade": 35, "cidade": "Rio de Janeiro" }'
-```
+``
 
 > Use o código com cuidado.
 
 ### Exemplo de Exclusão de Dados (DELETE):
 
 ``bash
-curl -X DELETE http://localhost:3000/delete -H 'Content-Type: application/json' -d '{ "id": 2 }'
+curl -X DELETE http://localhost:3000/delete -H 'Content-Type: application/json' -d '{ "nome": 2 }'
 ``
 
 > Use o código com cuidado.
