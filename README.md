@@ -3,12 +3,9 @@
 ## Dados para Edição (PUT):
 
 ``json
-{
-  "id": 1,
-  "nome": "Sicrano da Silva",
-  "idade": 35,
-  "cidade": "Rio de Janeiro"
-}``
+"nome": "Sicrano da Silva", 
+"cpf:"319.136.964-30"}'
+``
 # Documentação da API de Dados Fake
 
 ## Dados para Edição (PUT):
