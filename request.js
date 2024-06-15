@@ -5,7 +5,7 @@ const httpRequest = async () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome: "cas" }),
+      body: JSON.stringify({ nome: "carlos", cpf: "444747847474666ghbgh" }),
     });
     const res = await httpRequest.json()
     console.log(res);

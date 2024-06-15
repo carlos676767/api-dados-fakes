@@ -16,10 +16,11 @@ api.get("/get", async (data, resp) => {
   }
 });
 
-api.post("/post", (data, req) => {
+api.post("/post",  async(data, req) => {
   try {
     const dados = data.body
-    console.log(dados);
+    const {nome, cpf} = dados
+    const dataBase = await databaseCreate(nome, cpf)
     req.send({ resposta: "OK", status: 200 });
   } catch (error) {
     console.log(error);
@@ -41,14 +42,24 @@ async function databaseConnect() {
 }
 
 const consultarDatabase = async () => {
-  const data = await databaseConnect();
-  const databaseConsultFromMongo = await data.find().toArray();
-  return databaseConsultFromMongo;
+  try {
+    const data = await databaseConnect();
+    const databaseConsultFromMongo = await data.find().toArray();
+    return databaseConsultFromMongo;
+  } catch (error) {
+    console.log('error database consult');
+  }
 };
 
 
-const databaseCreate = async() => {
-
+const databaseCreate = async(cpf, name) => {
+  try {
+    const data = await databaseConnect();
+    const dataBaseNewDados = await data.insertOne({cpfPerson: cpf, namePreson: name})
+    console.log('sucess database dados new');
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 api.listen(8080, () => {
