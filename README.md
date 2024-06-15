@@ -48,7 +48,7 @@ curl http://localhost:3000/get
 ### Exemplo de Adição de Dados (POST):
 
 ``
-curl -X POST http://localhost:3000/post -H 'Content-Type: application/json' -d '{ "nome": "Fulano de Tal", "idade": 30, "cidade": "São Paulo" }'
+curl -X POST http://localhost:3000/post -H 'Content-Type: application/json' -d "nome": "Sicrano da Silva", "cpf:"319.136.964-30" }'
 ``
 
 > Use o código com cuidado.
@@ -56,7 +56,7 @@ curl -X POST http://localhost:3000/post -H 'Content-Type: application/json' -d '
 ### Exemplo de Edição de Dados (PUT):
 
 ``bash
-curl -X PUT http://localhost:3000/edit -H 'Content-Type: application/json' -d '{ "id": 1, "nome": "Sicrano da Silva", "idade": 35, "cidade": "Rio de Janeiro" }'
+curl -X PUT http://localhost:3000/edit -H 'Content-Type: application/json' -d '{ "id": 1, "nome": "Sicrano da Silva", "cpf:"319.136.964-30" }'
 ``
 
 > Use o código com cuidado.
