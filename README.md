@@ -21,7 +21,6 @@
   "cidade": "Rio de Janeiro"
 }``
 
-> Use o código com cuidado.
 
 ## Dados para Exclusão (DELETE):
 
@@ -31,7 +30,6 @@
 }
 ``
 
-> Use o código com cuidado.
 
 ## Observações:
 - Os dados armazenados são fictícios e não possuem nenhuma relação com a realidade.
@@ -46,8 +44,6 @@ Para utilizar a API, você pode utilizar ferramentas como Postman ou `curl`.
 ``bash
 curl http://localhost:3000/get
 ``
-
-> Use o código com cuidado.
 
 ### Exemplo de Adição de Dados (POST):
 
@@ -70,5 +66,3 @@ curl -X PUT http://localhost:3000/edit -H 'Content-Type: application/json' -d '{
 ``bash
 curl -X DELETE http://localhost:3000/delete -H 'Content-Type: application/json' -d '{ "nome": 2 }'
 ``
-
-> Use o código com cuidado.
