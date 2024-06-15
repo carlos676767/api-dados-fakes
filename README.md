@@ -48,8 +48,6 @@ curl http://localhost:3000/get
 curl -X POST http://localhost:3000/post -H 'Content-Type: application/json' -d "nome": "Sicrano da Silva", "cpf:"319.136.964-30" }'
 ``
 
-> Use o código com cuidado.
-
 ### Exemplo de Edição de Dados (PUT):
 
 ``bash
