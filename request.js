@@ -24,20 +24,20 @@ setInterval(() => {
     httpRequest()
 },10);
 
-const httpPost = async () => {
-  try {
-    const httpRequest = await fetch("http://localhost:8080/delete", {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ nome: "Lester Cummerata" }),
-    });
-    const res = await httpRequest.json();
-    console.log(res);
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const httpPost = async () => {
+//   try {
+//     const httpRequest = await fetch("http://localhost:8080/delete", {
+//       method: "DELETE",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ nome: "Lester Cummerata" }),
+//     });
+//     const res = await httpRequest.json();
+//     console.log(res);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
-httpPost();
+// httpPost();
