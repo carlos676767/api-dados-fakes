@@ -13,20 +13,19 @@
 
 ## Dados para Edição (PUT):
 
-```json
+``json
 {
   "id": 1,
   "nome": "Sicrano da Silva",
   "idade": 35,
   "cidade": "Rio de Janeiro"
-}
-``
+}``
 
 > Use o código com cuidado.
 
 ## Dados para Exclusão (DELETE):
 
-```json
+``json
 {
   "id": 2
 }
@@ -44,9 +43,9 @@ Para utilizar a API, você pode utilizar ferramentas como Postman ou `curl`.
 
 ### Exemplo de Recuperação de Dados (GET):
 
-```bash
+``bash
 curl http://localhost:3000/get
-```
+``
 
 > Use o código com cuidado.
 
