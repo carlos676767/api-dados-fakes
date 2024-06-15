@@ -1,12 +1,13 @@
 const express = require("express");
+const  bodyParser = require('body-parser')
 const { MongoClient } = require("mongodb");
 const api = express();
 require("dotenv").config();
 const url = `mongodb+srv://admin:${process.env.PASS_BANCO}@dados.7d94myt.mongodb.net/`;
 const client = new MongoClient(url);
-const emittes = require("events");
+api.use(bodyParser.json())
 
-api.get("/", async (data, resp) => {
+api.get("/get", async (data, resp) => {
   try {
     const apiDados = await consultarDatabase();
     resp.send({ resposta: "OK", status: 200, dados: apiDados });
@@ -14,6 +15,17 @@ api.get("/", async (data, resp) => {
     resp.send({ status: 404, resposta: "error 404 not found" });
   }
 });
+
+api.post("/post", (data, req) => {
+  try {
+    const dados = data.body
+    console.log(dados);
+    req.send({ resposta: "OK", status: 200 });
+  } catch (error) {
+    console.log(error);
+  }
+})
+
 
 async function databaseConnect() {
   try {
@@ -33,6 +45,11 @@ const consultarDatabase = async () => {
   const databaseConsultFromMongo = await data.find().toArray();
   return databaseConsultFromMongo;
 };
+
+
+const databaseCreate = async() => {
+
+}
 
 api.listen(8080, () => {
   console.log("servidor rodando na porta 8080");
